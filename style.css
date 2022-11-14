@@ -1,0 +1,273 @@
+@font-face {
+  font-family: "gilroy";
+  src: url("/fonts/Gilroy-Regular.otf");
+}
+@font-face {
+  font-family: "Konexy Personal Use";
+  src: url("/fonts/Konexy\ Font.otf");
+}
+@font-face {
+  font-family: "Vanguard CF";
+  src: url("/fonts/vanguard-cf-demi-bold.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+#cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 998;
+  pointer-events: none;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+#cursor1 {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  z-index: 999;
+  display: none;
+  pointer-events: none;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+}
+#cursor1 svg:nth-child(1) {
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: difference;
+}
+#cursor1 #arrow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  border-radius: 50%;
+}
+#cursor1 #arrow svg {
+  height: 70%;
+  width: 70%;
+}
+#sj-header {
+  height: 80vh;
+  width: 100%;
+}
+#sj-header #coverup {
+  height: 120vh;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 998;
+}
+#sj-header #nav {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  padding: 50px 30px;
+}
+#sj-header #nav i {
+  position: fixed;
+  right: 1%;
+  top: 40px;
+  z-index: 10;
+  background-color: white;
+  padding: 18px;
+  border-radius: 50%;
+}
+#sj-header #nav i:hover {
+  transform-origin: 50% 50%;
+  transform: rotate(180deg);
+  transition: all 1s;
+  cursor: pointer;
+}
+#sj-header #nav h4 {
+  font-family: "Konexy Personal Use";
+  letter-spacing: 5px;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 50px;
+  padding: 10px;
+}
+#sj-header #content {
+  position: absolute;
+  left: 6%;
+}
+#sj-header #content #txt {
+  overflow: hidden;
+  display: flex;
+}
+#sj-header #content #txt h1 {
+  font-size: 200px;
+  font-family: "Vanguard CF";
+}
+#sj-header #content p {
+  font-size: 12px;
+  position: absolute;
+  right: -60%;
+  bottom: 20px;
+}
+#sj-header #sidebar {
+  font-family: "gilroy";
+  height: 25%;
+  width: 3%;
+  position: fixed;
+  top: 50%;
+  right: 0%;
+  transform: translate(0%, -50%);
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  z-index: 10;
+}
+#sj-header #sidebar h4 {
+  transform-origin: 50% 50%;
+  transform: rotate(270deg);
+  margin-top: 100px;
+}
+#sj-main {
+  width: 100%;
+}
+.sj-main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "gilroy";
+}
+.sj-main #content {
+  height: 75%;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+.sj-main .rcontent {
+  right: 5%;
+}
+.sj-main .lcontent {
+  left: 5%;
+}
+.sj-main #content #top {
+  overflow: hidden;
+  height: 85%;
+  width: 100%;
+  background-position: center;
+}
+.sj-main #content #top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.sj-main #content #top img:hover {
+  transition: all 1s;
+  transform: scale(1.15);
+}
+.sj-main #content #btm {
+  padding: 10px;
+  height: 15%;
+  width: 100%;
+  line-height: 35px;
+}
+.sj-main #content #btm h5 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+#smain1 {
+  height: 90vh;
+}
+#smain5 {
+  height: 90vh;
+}
+#smain6 {
+  height: 150vh;
+}
+#smain7 {
+  height: 90vh;
+}
+#sj-footer {
+  height: 83vh;
+  width: 100%;
+  position: relative;
+}
+#sj-footer #content {
+  position: absolute;
+  left: 6%;
+}
+#sj-footer #content h1 {
+  font-family: "Vanguard CF";
+  font-size: 120px;
+}
+#sj-footer #content #txt {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  background-color: white;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#sj-footer #content #left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 20px;
+}
+#sj-footer #content #right {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 600px;
+}
+#sj-footer #content #right div {
+  position: absolute;
+  z-index: 99;
+  top: 70%;
+}
+#sj-footer #content #circle {
+  height: 150px;
+  width: 150px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "gilroy";
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+#sj-footer #footer {
+  position: absolute;
+  bottom: 0%;
+  padding: 20px 6%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  background-color: white;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
